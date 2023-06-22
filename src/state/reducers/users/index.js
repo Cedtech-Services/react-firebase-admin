@@ -15,7 +15,7 @@ import {
   USERS_MODIFY_USER_FAIL,
   USERS_CLEAN_UP,
   USERS_CLEAR_DATA_LOGOUT,
-} from 'state/actions/users';
+} from '../../actions/users';
 
 const initialState = {
   data: [],
@@ -83,18 +83,18 @@ export const usersReducer = createReducer(
       data: !state.data
         ? []
         : state.data.map((elem) => {
-            if (elem.id === payload.id) {
-              return {
-                name: payload.user.name,
-                location: payload.user.location,
-                id: payload.id,
-                logoUrl: payload.user.logoUrl,
-                createdAt: payload.user.createdAt,
-                email: elem.email,
-              };
-            }
-            return elem;
-          }),
+          if (elem.id === payload.id) {
+            return {
+              name: payload.user.name,
+              location: payload.user.location,
+              id: payload.id,
+              logoUrl: payload.user.logoUrl,
+              createdAt: payload.user.createdAt,
+              email: elem.email,
+            };
+          }
+          return elem;
+        }),
       loading: false,
       error: null,
       success: true,

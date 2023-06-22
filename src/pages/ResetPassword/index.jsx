@@ -6,10 +6,10 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers';
 import * as yup from 'yup';
 
-import { useFormatMessage } from 'hooks';
-import { resetPassword, authCleanUp } from 'state/actions/auth';
-import paths from 'pages/Router/paths';
-import ErrorMessage from 'components/ErrorMessage';
+import { useFormatMessage } from '../../hooks';
+import { resetPassword, authCleanUp } from '../../state/actions/auth';
+import paths from '../Router/paths';
+import ErrorMessage from '../../components/ErrorMessage';
 
 import classes from './ResetPassword.module.scss';
 

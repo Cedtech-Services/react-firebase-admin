@@ -4,7 +4,7 @@ import {
   fetchCollection,
   fetchDocument,
   updateDocument,
-} from './rtdb';
+} from './firestore';
 
 export {
   createDocument,

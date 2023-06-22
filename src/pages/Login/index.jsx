@@ -7,18 +7,17 @@ import { StyledFirebaseAuth } from 'react-firebaseui';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers';
 import * as yup from 'yup';
-
-import firebase from 'firebase.js';
+import firebase from '../../firebase.js';
 import {
   auth,
   setPassword,
   authCleanUp,
   authWithSocialMedia,
-} from 'state/actions/auth';
-import { useFormatMessage } from 'hooks';
-import { firebaseError, uiConfig } from 'utils';
-import ErrorMessage from 'components/ErrorMessage';
-import paths from 'pages/Router/paths';
+} from '../../state/actions/auth';
+import { useFormatMessage } from '../../hooks';
+import { firebaseError, uiConfig } from '../../utils';
+import ErrorMessage from '../../components/ErrorMessage';
+import paths from '../Router/paths';
 import classes from './Login.module.scss';
 
 const schema = yup.object().shape({
@@ -36,6 +35,8 @@ const Login = () => {
     }),
     shallowEqual
   );
+
+  console.log('error', error);
 
   const dispatch = useDispatch();
 
@@ -199,7 +200,7 @@ const Login = () => {
                           classes.errorMessage
                         )}
                       >
-                        {error}
+                        {typeof error === 'string' ? error : error?.message}
                       </p>
                     )}
                   </form>

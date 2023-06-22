@@ -1,10 +1,9 @@
 import { createIntl, createIntlCache } from 'react-intl';
-import firebase from 'firebase.js';
+import firebase from '../firebase.js';
 
-import english from 'languages/en';
-import spanish from 'languages/es';
-import en from 'assets/en.png';
-import es from 'assets/es.png';
+import english from '../languages/en.json';
+import en from '../assets/en.png';
+import es from '../assets/es.png';
 
 export const FIREBASE_RESPONSE = {
   EMAIL_IN_USE: 'auth/email-already-exists',
@@ -21,8 +20,7 @@ export const FIREBASE_RESPONSE = {
 };
 
 export const messages = {
-  en: english,
-  es: spanish,
+  en: english
 };
 
 const getIntlContext = (locale) => {

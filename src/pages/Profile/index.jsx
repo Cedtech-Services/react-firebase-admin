@@ -2,9 +2,9 @@ import React from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import * as yup from 'yup';
 
-import { useFormatMessage } from 'hooks';
-import UserForm from 'components/UserForm';
-import { modifyUser } from 'state/actions/users';
+import { useFormatMessage } from '../../hooks';
+import UserForm from '../../components/UserForm';
+import { modifyUser } from '../../state/actions/users';
 import ChangePassword from './ChangePassword';
 
 const schema = yup.object().shape({

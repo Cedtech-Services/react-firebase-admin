@@ -1,8 +1,8 @@
 import { createAction } from 'redux-act';
 import { toastr } from 'react-redux-toastr';
 
-import { firebaseError } from 'utils';
-import firebase from 'firebase.js';
+import { firebaseError } from '../../utils';
+import firebase from '../../firebase.js';
 import { checkUserData, AUTH_UPDATE_USER_DATA } from './auth';
 import {
   fetchCollection,
@@ -146,7 +146,7 @@ const uploadLogo = (uid, file) => {
 const getLogoUrl = (uid, file) => {
   const fileExtension = file.name.split('.').pop();
 
-  const bucketUrl = `${process.env.REACT_APP_FIRE_BASE_STORAGE_API}`;
+  const bucketUrl = import.meta.env.VITE_REACT_APP_FIRE_BASE_STORAGE_API;
 
   return `${bucketUrl}/o/users%2F${uid}_200x200.${fileExtension}?alt=media`;
 };
@@ -193,7 +193,7 @@ export const createUser = ({
     const createUserDbTask = createDocument('users', uid, userData);
 
     const actionCodeSettings = {
-      url: process.env.REACT_APP_LOGIN_PAGE_URL,
+      url: import.meta.env.VITE_REACT_APP_LOGIN_PAGE_URL,
       handleCodeInApp: true,
     };
 

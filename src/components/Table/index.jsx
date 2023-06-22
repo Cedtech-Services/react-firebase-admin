@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { useTable, useSortBy, usePagination } from 'react-table';
 import PropTypes from 'prop-types';
 
-import { useFormatMessage } from 'hooks';
+import { useFormatMessage } from '../../hooks';
 import classes from './Table.module.scss';
 import './TableMobile.css';
 

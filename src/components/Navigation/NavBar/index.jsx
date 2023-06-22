@@ -3,12 +3,12 @@ import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import { availableLocales, flags } from 'utils';
-import { setUserLocale } from 'state/actions/preferences';
-import { useFormatMessage } from 'hooks';
-import { logout } from 'state/actions/auth';
-import paths from 'pages/Router/paths';
-import defaultLogo from 'assets/user-default-log.svg';
+import { availableLocales, flags } from '../../../utils';
+import { setUserLocale } from '../../../state/actions/preferences';
+import { useFormatMessage } from '../../../hooks';
+import { logout } from '../../../state/actions/auth';
+import paths from '../../../pages/Router/paths';
+import defaultLogo from '../../../assets/user-default-log.svg';
 import Link from '../Link';
 
 const NavBar = ({ handleMobileToggle, asideMobileActive }) => {
@@ -82,34 +82,6 @@ const NavBar = ({ handleMobileToggle, asideMobileActive }) => {
         id="navbar-menu"
       >
         <div className="navbar-end">
-          <div className="navbar-item has-dropdown has-dropdown-with-icons has-divider has-user-avatar is-hoverable">
-            <a className="navbar-link is-arrowless">
-              <div className="is-user-avatar">
-                <span>
-                  <img id={locale} src={flags[locale]} alt={`${locale} flag`} />
-                </span>
-              </div>
-              <span className="icon">
-                <i className="mdi mdi-chevron-down" />
-              </span>
-            </a>
-            <div className="navbar-dropdown">
-              {locales.map((local) => (
-                <a
-                  onClick={() => changeLocaleHandler(local)}
-                  className="navbar-item"
-                  id={local}
-                  key={local}
-                >
-                  <div className="is-user-avatar">
-                    <span>
-                      <img src={flags[local]} alt={`${local} flag`} />
-                    </span>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
           <div className="navbar-item has-dropdown has-dropdown-with-icons has-divider has-user-avatar is-hoverable">
             <a className="navbar-link is-arrowless">
               <div className="is-user-avatar">

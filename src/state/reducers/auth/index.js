@@ -25,7 +25,7 @@ import {
   AUTH_PROVIDER_FAIL,
   AUTH_PROVIDER_INIT,
   AUTH_PROVIDER_SUCCESS
-} from 'state/actions/auth';
+} from '../../actions/auth';
 
 const initialState = {
   userData: {

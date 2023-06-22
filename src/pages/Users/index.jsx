@@ -4,11 +4,15 @@ import { Redirect, Link } from 'react-router-dom';
 import classNames from 'classnames';
 import ClipLoader from 'react-spinners/ClipLoader';
 
-import { useFormatMessage, useFormatDate } from 'hooks';
-import Table from 'components/Table';
-import { fetchUsers, deleteUser, usersCleanUp } from 'state/actions/users';
-import paths from 'pages/Router/paths';
-import ConfirmationModal from 'components/ConfirmationModal';
+import { useFormatMessage, useFormatDate } from '../../hooks';
+import Table from '../../components/Table';
+import {
+  fetchUsers,
+  deleteUser,
+  usersCleanUp,
+} from '../../state/actions/users';
+import paths from '../Router/paths';
+import ConfirmationModal from '../../components/ConfirmationModal';
 import classes from './Users.module.scss';
 
 const Users = () => {

@@ -2,8 +2,8 @@ import React from 'react';
 import { IntlProvider } from 'react-intl';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 
-import { setUserLocale } from 'state/actions/preferences';
-import { availableLocales, browserLocale, messages } from 'utils/index';
+import { setUserLocale } from '../../state/actions/preferences';
+import { availableLocales, browserLocale, messages } from '../../utils/index';
 
 const LanguageWrapper = ({ children }) => {
   const dispatch = useDispatch();

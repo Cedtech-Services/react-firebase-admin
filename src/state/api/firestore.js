@@ -1,4 +1,4 @@
-import firebase from 'firebase.js';
+import firebase from '../../firebase.js';
 
 const getFirestoreRef = (path) => firebase.firestore().collection(path);
 

@@ -12,7 +12,7 @@
     "test": "mocha -r ts-node/register --recursive 'test/**/*.test.ts' --timeout 10000 --exit"
   },
   "engines": {
-    "node": "10"
+    "node": "16"
   },
   "main": "lib/index.js",
   "dependencies": {

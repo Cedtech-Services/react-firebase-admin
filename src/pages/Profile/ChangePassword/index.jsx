@@ -6,9 +6,9 @@ import { yupResolver } from '@hookform/resolvers';
 import * as yup from 'yup';
 import classNames from 'classnames';
 
-import { changeUserPassword, authCleanUp } from 'state/actions/auth';
-import { useFormatMessage } from 'hooks';
-import ErrorMessage from 'components/ErrorMessage';
+import { changeUserPassword, authCleanUp } from '../../../state/actions/auth';
+import { useFormatMessage } from '../../../hooks';
+import ErrorMessage from '../../../components/ErrorMessage';
 
 const schema = yup.object().shape({
   current: yup.string().min(6).required(),

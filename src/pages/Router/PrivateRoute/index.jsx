@@ -3,13 +3,13 @@ import { Route, Redirect } from 'react-router-dom';
 import { useSelector, shallowEqual } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Layout from 'components/Layout';
+import Layout from '../../../components/Layout';
 import paths from '../paths';
 
 const PrivateRoute = ({ path, component: Component }) => {
   const { id } = useSelector(
-    state => ({
-      id: state.auth.userData.id
+    (state) => ({
+      id: state.auth.userData.id,
     }),
     shallowEqual
   );
@@ -27,7 +27,7 @@ const PrivateRoute = ({ path, component: Component }) => {
 
 PrivateRoute.propType = {
   path: PropTypes.string.isRequired,
-  component: PropTypes.element.isRequired
+  component: PropTypes.element.isRequired,
 };
 
 export default PrivateRoute;

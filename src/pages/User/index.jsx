@@ -4,10 +4,10 @@ import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import ClipLoader from 'react-spinners/ClipLoader';
 import * as yup from 'yup';
 
-import UserForm from 'components/UserForm';
-import { createUser, modifyUser, fetchUsers } from 'state/actions/users';
-import paths from 'pages/Router/paths';
-import { useFormatMessage } from 'hooks';
+import UserForm from '../../components/UserForm';
+import { createUser, modifyUser, fetchUsers } from '../../state/actions/users';
+import paths from '../Router/paths';
+import { useFormatMessage } from '../../hooks';
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),

@@ -1,4 +1,5 @@
 import { createStore, compose, applyMiddleware } from 'redux';
+// import { configureStore } from '@reduxjs/toolkit'
 import { persistStore } from 'redux-persist';
 import thunk from 'redux-thunk';
 
@@ -9,7 +10,7 @@ export const configureStore = initialState => {
   const middlewares = [];
 
   const composeEnhancers =
-    (process.env.NODE_ENV === 'development'
+    (import.meta.env.NODE_ENV === 'development'
       ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
       : null) || compose;
 

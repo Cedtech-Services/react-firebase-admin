@@ -1,6 +1,6 @@
 import { createReducer } from 'redux-act';
 
-import { PREFERENCES_SET_LOCALE } from 'state/actions/preferences';
+import { PREFERENCES_SET_LOCALE } from '../../actions/preferences';
 
 const initialState = {
   locale: null

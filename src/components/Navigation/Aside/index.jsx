@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { useFormatMessage } from 'hooks';
-import paths from 'pages/Router/paths';
+import { useFormatMessage } from '../../../hooks';
+import paths from '../../../pages/Router/paths';
 import NavLink from '../Link';
 import classes from './Aside.module.scss';
 
@@ -15,7 +15,7 @@ export const SubMenu = ({ label, children }) => {
   return (
     <li className={classNames({ 'is-active': active })}>
       <a
-        exact-active-class="is-active"
+        // exact-active-class="is-active"
         className="has-icon has-dropdown-icon"
         onClick={() => setActive(!active)}
       >

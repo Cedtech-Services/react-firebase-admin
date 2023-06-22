@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useFormatMessage } from 'hooks';
+import { useFormatMessage } from '../../hooks';
 
 const Home = () => (
   <>

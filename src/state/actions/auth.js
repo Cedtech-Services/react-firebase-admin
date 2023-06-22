@@ -1,8 +1,8 @@
 import { createAction } from 'redux-act';
 import { toastr } from 'react-redux-toastr';
 
-import { firebaseError, FIREBASE_RESPONSE } from 'utils';
-import firebase from 'firebase.js';
+import { firebaseError, FIREBASE_RESPONSE } from '../../utils';
+import firebase from '../../firebase.js';
 import { clearUsersDataLogout } from './users';
 import { createDocument, fetchDocument } from '../api';
 
